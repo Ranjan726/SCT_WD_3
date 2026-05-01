@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>Tic Tac Toe</h1>
+            <div class="mode-selector">
+                <button id="btn-pvp" class="mode-btn active">Player vs Player</button>
+                <button id="btn-pvc" class="mode-btn">Player vs Computer</button>
+            </div>
+        </header>
+
+        <main class="game-container glass-panel">
+            <div class="game-info">
+                <div class="score-card player-x">
+                    <span class="label">Player X</span>
+                    <span class="score" id="score-x">0</span>
+                </div>
+                <div class="turn-indicator" id="turn-indicator">X's Turn</div>
+                <div class="score-card player-o">
+                    <span class="label" id="label-o">Player O</span>
+                    <span class="score" id="score-o">0</span>
+                </div>
+            </div>
+
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="controls">
+                <button id="reset-btn" class="action-btn">Reset Game</button>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal glass-panel">
+            <h2 id="result-message">You Win!</h2>
+            <button id="play-again-btn" class="action-btn primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
